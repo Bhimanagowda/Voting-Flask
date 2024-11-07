@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Voting System</h1>
+            <p>Vote for your favorite candidate!</p>
+        </header>
+
+        <div id="candidates">
+            <h2>Choose a candidate:</h2>
+            <ul id="candidate-list">
+                {% for candidate in candidates %}
+                    <li class="candidate-item">
+                        <div class="candidate">
+                            <img src="https://png.pngtree.com/png-vector/20240205/ourlarge/pngtree-emoji-face-simple-happy-png-image_11646906.png" alt="Candidate Photo" class="candidate-photo">
+                            <button class="vote-btn" onclick="castVote('{{ candidate }}')">{{ candidate }}</button>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+            <p id="vote-message"></p>
+        </div>
+
+        <div id="results">
+          <button onclick="showResults()" class="results-btn">Show Results</button>
+          <div id="results-display">
+              <h3>Voting Results</h3>
+              <ul id="results-list">
+                  <!-- Results will be dynamically inserted here -->
+              </ul>
+          </div>
+      </div>
+      
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

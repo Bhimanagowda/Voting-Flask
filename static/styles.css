@@ -1,0 +1,151 @@
+/* Reset some basic styles for a cleaner look */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Centering the content */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #4CAF50;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #777;
+}
+
+/* Candidate list styles */
+#candidates {
+  margin-top: 20px;
+}
+
+#candidate-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.candidate-item {
+  width: 45%;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.candidate {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.vote-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.vote-btn:hover {
+  background-color: #45a049;
+}
+
+/* Results button and display */
+#results {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.results-btn {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.4em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.results-btn:hover {
+  background-color: #1976D2;
+  transform: translateY(-2px);
+}
+
+.results-btn:active {
+  transform: translateY(0);
+}
+
+#results-display {
+  margin-top: 30px;
+  font-size: 1.2em;
+  color: #333;
+  text-align: center;
+  display: none; /* Initially hidden, will be shown when results are displayed */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#results-display ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#results-display li {
+  font-size: 1.2em;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#results-display li:last-child {
+  border-bottom: none;
+}
+
+#results-display .winner {
+  font-weight: bold;
+  color: #4CAF50;
+  font-size: 1.3em;
+}
