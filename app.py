@@ -40,7 +40,7 @@ def initialize_db():
     conn.commit()
     cursor.close()
     conn.close()
-
+#VotingSystem Class
 class VotingSystem:
     def __init__(self):
         self.candidates = self.get_candidates()
